@@ -20,13 +20,17 @@ class App extends Component {
         this.setState({ paths: channel })
     }
 
-    handleChange = (event) => {
+    handleChange = event => {
+        event.preventDefault()
         this.setState({ value: event.target.value })
     }
 
-    handleSubmit = (event) => {
-        alert('A name was submitted: ' + this.state.value)
+    handleSubmit = event => {
         event.preventDefault()
+        this.setState({
+            todos: [...this.state.todos, this.state.value],
+            value: '',
+        })
     }
 
     render() {
@@ -67,11 +71,17 @@ class App extends Component {
                 <div className="input box">
                     <form onSubmit={this.handleSubmit}>
                         <input
+                            className="input-field"
                             type="text"
+                            placeholder="What is your plan"
                             value={this.state.value}
                             onChange={this.handleChange}
                         />
-                        <input type="submit" value="Submit" />
+                        <input
+                            className="input-submit"
+                            type="submit"
+                            value="Submit"
+                        />
                     </form>
                 </div>
             </div>
