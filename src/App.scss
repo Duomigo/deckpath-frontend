@@ -1,3 +1,6 @@
+// Font variable
+$font: "Proxima Nova", "Helvetica", sans-serif;
+
 *,
 *:before,
 *:after {
@@ -6,7 +9,7 @@
 
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: regular;
     background-color: #f2f2f2;
 }
 
@@ -29,10 +32,12 @@ input {
 }
 
 .message-list li {
+    list-style-type: none;
     padding: 0.2em;
     margin-top: 1em;
     margin-bottom: 1em;
     background-color: #f2f2f2;
+    color: #362233;
 }
 
 /* Our Grid Code */
@@ -93,8 +98,13 @@ input {
 .item {
     color: #fff;
     width: 100%;
-    padding: 3px;
-    margin: 2px;
+    padding: 7px;
+    margin: 3px;
+    border: 0;
+    text-align: left;
+    font-family: regular;
+    font-size: 18px;
+    border-radius: 5px;
 }
 
 .item:hover {
