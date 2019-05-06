@@ -1,6 +1,3 @@
-// Font variable
-$font: "Proxima Nova", "Helvetica", sans-serif;
-
 *,
 *:before,
 *:after {
@@ -14,7 +11,7 @@ body {
 }
 
 .box {
-    color: #fff;
+    color: #998da0;
     padding: 1em;
     text-align: center;
 }
@@ -23,7 +20,7 @@ input {
     width: 100%;
     padding: 1em;
     outline: none;
-    border: 2px solid #E0E6E8;
+    border: 2px solid #e0e6e8;
 }
 
 .input-field {
@@ -36,7 +33,7 @@ input {
 .input-field:focus {
     border-width: 2px;
     border-color: #2dc5a1;
-    transition: border-color .5s ease,opacity .3s ease;
+    transition: border-color 0.5s ease, opacity 0.3s ease;
 }
 
 .input-submit {
@@ -64,23 +61,28 @@ input {
 .app-layout {
     display: grid;
     height: 100vh;
-    grid-template-columns: 75px 200px 1fr;
+    grid-template-columns: 75px 225px 1fr;
     grid-template-rows: auto 1fr auto;
 }
 
 .header {
     background-color: #ffffff;
 }
+
 .teams {
     background-color: #362233;
 }
+
 .channels {
     //background-color: #52364e;
-    background-color: #FBFBFD;
+    background-color: #ffffff;
+    border-right: 2px solid #e6ebf1;
 }
+
 .messages {
     background-color: #ffffff;
 }
+
 .write {
     background-color: #f2f2f2;
 }
@@ -116,7 +118,7 @@ input {
 
 // new folks
 .item {
-    color: #fff;
+    color: #5d5d5d;
     width: 100%;
     padding: 7px;
     margin: 3px;
@@ -128,6 +130,28 @@ input {
 }
 
 .item:hover {
+    color: #362233;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.item:focus {
+    outline-width: 0;
+}
+
+//highlighted compoenent
+.item.selected {
     color: #f2f2f2;
-    background-color: #362233;
+    background-color: #e8384f;
+    cursor: pointer;
+}
+
+.channels-category {
+    font-family: medium;
+    //font-size: 22px;
+    color: #463853;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: -10px;
+    margin-top: -10px;
 }
