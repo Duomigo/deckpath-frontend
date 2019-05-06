@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 import './App.scss'
 import '../src/app/fonts/Font.scss'
 
-import ToDoList from './app/components/ToDoList'
+import ToDoCard from './app/components/ToDoCard'
+import ToDo from './app/components/ToDo'
 
 // Functional Component: function App()
 // Class Component: class App extends Component
@@ -66,10 +67,8 @@ class App extends Component {
                 </div>
 
                 <div className="header box">{paths || user}</div>
-                <div className="todos">
-                    <ToDoList title="Today" />
-                    <ToDoList title="Tomorrow" />
-                    <ToDoList title="Tofuture" />
+                <div>
+                    <ToDo />
                 </div>
             </div>
         )
